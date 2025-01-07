@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed; /* Make the navbar fixed */
+             top: 0;
+            width: 100%;
+            z-index: 1000; /* Ensures navbar is above other content */
+            
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Change the number of columns here */
+            gap: 3px; /* Adjust the gap between grid cells */
+            padding: 10px;
+            
+            
+            
+        }
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc; /* Optional: border around grid items */
+        }
+        .grid-item img {
+            max-width: 300px;
+            max-height: 300px;
+            margin-bottom: 20px; /* Adds space between the image and the caption */
+        }
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+        figcaption {
+            margin-top: 5px;
+            font-style: normal;
+            color: rgb(19, 18, 18);
+            text-align: center; /* Center-align text within figcaption */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="miniProject.php">Home</a>
+        <a href="shopping.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.php">Contact</a>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <figure>
+                <a href="https://www.amazon.in/TrustBasket-TrustBin-Indoor-composter-Starter/dp/B07DPHN54C/ref=sr_1_28?crid=1L6MO7SH45ZKD&dib=eyJ2IjoiMSJ9.VkKZ1gHrSl9OkVhiLcRuicDUqStyNb8EOMigyefgQIYu_VpgYLZAI2erCXhuC6HGZlvz9encKxp8bIci_pMJYonRfpBCNJ6vWtU6QD43GhSWHr6P4rAqjIixfY2W5Ge7flR0DAAWEIJnxJwrsmnvLB9sD2llbK6uqSyGDfkvIKMPv1k73GmmzDmS0auZ589TWm_JPa9sE_4Pr_CnsKivLrKrpRCcfzIRyv_hTL0DEq7TjyC2jRpw9phNUkqR3w07lz3jviHk1VWweASAFljhkzug7k7DzXnqDYrpvBBCUrg.0aBZrro6HECU-du-JgFdWqHDo8D-SN3xx7DJnJdM54E&dib_tag=se&keywords=organic+waste+products&qid=1721818795&sprefix=organic+waste+products%2Caps%2C218&sr=8-28" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/71k5Oq0x8wL.AC_UL480_FMwebp_QL65.jpg" width="300px" height="250px" alt="Image">
+                </a>
+                <figcaption>TRUST BIN</figcaption>
+            </figure>
+        </div>
+        <div class="grid-item">
+            <figure>
+                <a href="https://www.amazon.in/640-Gardening-Garden-Tools-Prongs/dp/B0B4SNHTT3/ref=sr_1_25?crid=1FWJUFRYZ90NJ&dib=eyJ2IjoiMSJ9.CBh-lCyTsSyLNd7vt5TgSaSV5MZAmdYEYmksMhJ6mKLWvU0XMIiAFSEzQS_4WdbJ-ieLnCf-KSRnsdMphEAsVlE1-SY07MdFb1TbhJr3V87tnkeNE6DBVp28wM-SXpId2YUGYb_zFusUGxPwDvlJsv1z8fYRhtO2cS2JlJm38rzfGP546taCIEdz4CaUniyYUT0oEBJSsydEY2wde-HMs5N8Jpf4QYgjw5-mtJfqEAMh4x5_ijum6V2ceHFph0E800U-mj3KlpOUNZ-CEgZrMEem5oPZT8IEzCkRtDTfkcE.6TxoFqQVjTzbD5GBu8qEUozaTp5t3kyxK9ews5JcYdo&dib_tag=se&keywords=prong+gardening+tool&qid=1721823116&sprefix=prong+gardening+tool%2Caps%2C244&sr=8-25" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/61Gkmv7aPHL.AC_UL480_FMwebp_QL65.jpg" height="200px" alt="Image">
+                </a>
+                <figcaption>PONG TOOL</figcaption>
+            </figure>
+        </div>
+        <div class="grid-item">
+            <figure>
+                <a href="https://www.amazon.in/M3-Cylindrical-Biogas-Storage-Balloon/dp/B0CZG2CG47/ref=sr_1_7?crid=YSWGVBH8IY24&dib=eyJ2IjoiMSJ9.9RVEkp5BNQo6uttp_2d4IOry28uBaoTs8eCBA_klrsezY2Takft1y-YJgO6sv5PuAMdRFQeKuQsOHoG9kDkDHjs_mWL0XlBkQu3Mitu1GiPiNIXtTEwGgtNgEVIthF5ilTUpxDWVPlSMP41LNV6LF6KXs54Bz2uLi2V5QzSzVs8syMwwPHn6rCYfFNW_PaXjvtFw7HFwJ9-zF5Kx2jfneOi10fUv6ZYUhUhmNGIDbp8F0A1EG6855twfvOeY8HcaIHhfLNsi3S14kMNYjUcNPGVFlmWBd8pHYzx-WUW2V5A.FMKA4JMM3L8aDCm9TsygA_4cLE-hl0iXXAneqMWi2DY&dib_tag=se&keywords=biogas&qid=1722190816&sprefix=biogas%2Caps%2C268&sr=8-7" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/41pCR3rkruL._AC_UL480_FMwebp_QL65_.jpg" height="250px" alt="Image">
+                </a>
+                <figcaption>BIOGAS CYLINDER</figcaption>
+            </figure>
+        </div>
+        <div class="grid-item">
+            <figure>
+                <a href="https://www.amazon.in/Better-Tomorrow-Co-Plantable-Recycled/dp/B08NKB858J/ref=sr_1_3?crid=13KNYZF8OW1GS&dib=eyJ2IjoiMSJ9.FlnjiNyAbFzMEe6dZpVhr66wLcS-VPhmLxIyYy2EozK9xzt53GHZX0HWOrOWe0jnsm4qAYQrAkkTl1rgdeh2lBiqFil97cM_nGMDdl8KAemNslbszEgd_5XvyCQjE0aoPPs2RGr90ME4iTHI9PZIR5fF0tcXmaAJ5ZBy1xwqfU_5H3MNwI18bk32ft1LRO9cG8vLg3pjuPCA-sAepRcBCUiKI-nt3fhyFxNFcUNs-E6_ytK_gXwD0t6sjdOSLtebKS6_sZJ0Up2Zpg9KTG_xshN6fh6BchXNaXvwXtNlTGw.XdxQnAIEVMW4AK4BpfHtGMMhAkIGAp2SthriPMHw144&dib_tag=se&keywords=recycled+papers+products&qid=1722189450&sprefix=recycled+papers+products%2Caps%2C238&sr=8-3" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/616CXOM2IYL._AC_UL480_FMwebp_QL65_.jpg" alt="Image">
+                </a>
+                <figcaption>SEED PENCILS</figcaption>
+            </figure>
+        </div>
+        <div class="grid-item">
+            <figure>
+                <a href="https://m.media-amazon.com/images/I/71GE4x09EXL._AC_UL480_FMwebp_QL65_.jpg" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/71GE4x09EXL._AC_UL480_FMwebp_QL65_.jpg" height="300px" alt="Image">
+                </a>
+                <figcaption>BAMBOO TOOTH BRUSH</figcaption>
+            </figure>
+        </div>
+        <div class="grid-item">
+            <figure>
+                <a href="https://www.amazon.in/HASTHIP%C2%AE-Degradable-Nursery-Seedlings-Peat/dp/B0CW9K8X8Q/ref=sr_1_5?crid=LWWKI87IW4KM&dib=eyJ2IjoiMSJ9.95vkiniQCRZUFb0GMC7wtAOqn1C5VHRMdPnWM0HxWWlLCvUU1PjW2t41rND1mZLTVBbWzHBkNAP85A9HQMlJjxT62o_BjidGQfFDRcwems-c7YJAs2Csk7bK3yehuRRcU62QCnkmvTse9-njztPc5tYBIDkEHqM60nSRcPql0aB1gmzYaDYr9oU_82PHWeZ1WaD4xERHO96ONQxSLTt2ncdDyKqeJgO4Om4Rmbgd0dSUaQL2I7k0-pjDalYPjgWHyxJBn6ZGX0P5_vQ-PI5H9G9qewCBIOFgtsNvILrkGjI.OOBA5dIoGZ9a-sYXNlnJNGdUuGRVVpvkOEo2B-JB1rc&dib_tag=se&keywords=Compostable+Plant+Pots&qid=1722188726&sprefix=compostable+plant+pots%2Caps%2C341&sr=8-5" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/61ZajfazdAL._AC_UL480_FMwebp_QL65_.jpg" width="300px" height="250px" alt="Image">
+                </a>
+                <figcaption>SEADLING POTS</figcaption>
+            </figure>
+        </div>
+        <div class="grid-item">
+            <figure>
+                <a href="https://www.amazon.in/HOLY-SCRAP-Compostable-Kitchen-Certified/dp/B08JHPBX1Z/ref=sr_1_13?crid=256FYA4R6JOKZ&dib=eyJ2IjoiMSJ9.DUfO790XKngoZf3RhwjewpqutJOOxN27yeMAFI-0foIHtPGEfWXaiF4YF9Iga5pxZcWcgVO44CNw3K-Bf4iZFyN3wFrDTwX-AloMLx45v7EytkbVGRY1cv68pQ9e5bWTM7D60qAFZBb_tKOkJIVNm8fcpSCVlr28_VxaOJzclfmpudAaRbL-5zp3FySRptqcpHNjT5Z8AKzhhzKDaYxx0OQY4qEwSYa17IB5QKIClBoEltOCn6RFkBNXHiBcAAnMZFR74mmrYVlSFQGfK5nuAroZrPrgdY2wn8ZB-yUzB_M.m69xoKHHHsa9AorFIb0Fn0n75kNO5xUOaPHrEixxb3g&dib_tag=se&keywords=Food+Scraps&qid=1722189908&sprefix=food+scraps%2Caps%2C225&sr=8-13" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/81dP1Egca0L._AC_UL480_FMwebp_QL65_.jpg"  alt="Image">
+                </a>
+                <figcaption>SPONGES</figcaption>
+            </figure>
+        </div>
+        
+        <div class="grid-item">
+            <figure>
+                <a href="https://www.amazon.in/AIRNEX-Biodegradable-Natural-Kitchen-Sponge/dp/B0917GV13P/ref=sr_1_5?crid=XB3YYUP4DWDQ&dib=eyJ2IjoiMSJ9.SSlg6R9pGHFlZjLhC5OUyhPW98qbfehHP9X9jGXXL61PZ4eGzECEzBC8AqzZ3mq0ecIf1ffPzZp4twhnTetGLzUIgTrJVssLn_Clx3sKatWtpyxEiQ7r8KiengiyanaV7cDLVbqrT4LtL0UANEjn6Yl1CIukF09yZ9wGjYQw7FJXaEnOQhrGYf6Rzwp79v99wlfhcaZ1PQz0Dy9LeJTVKWCqH3Auft8-Az4D5dcQIBvOxDNUWicLwAW3fXA-JtUurnM5WRAp3vuEC3dWJAtMIej3MclmD7vMlkWb3z7HBLY.5WTeWev3m6kEZPfsLTbrH6vt3e0WAi7Pp-AkimHK5CQ&dib_tag=se&keywords=kitchen+coconut+sponges&qid=1722228727&sprefix=kitchen+coconut+sponges%2Caps%2C271&sr=8-5" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/91x5d21YKJL._AC_UL480_FMwebp_QL65_.jpg"  height="230px" alt="Image">
+                </a>
+                <figcaption>SPONGES</figcaption>
+            </figure>
+        </div>
+        <div class="grid-item">
+            <figure>
+                <a href="https://www.amazon.in/Organic-Composter-ltrs-Bag-Microbes/dp/B07CZG662Z/ref=sr_1_8?crid=1L6MO7SH45ZKD&dib=eyJ2IjoiMSJ9.VkKZ1gHrSl9OkVhiLcRuicDUqStyNb8EOMigyefgQIYu_VpgYLZAI2erCXhuC6HGZlvz9encKxp8bIci_pMJYonRfpBCNJ6vWtU6QD43GhSWHr6P4rAqjIixfY2W5Ge7flR0DAAWEIJnxJwrsmnvLB9sD2llbK6uqSyGDfkvIKMPv1k73GmmzDmS0auZ589TWm_JPa9sE_4Pr_CnsKivLrKrpRCcfzIRyv_hTL0DEq7TjyC2jRpw9phNUkqR3w07lz3jviHk1VWweASAFljhkzug7k7DzXnqDYrpvBBCUrg.0aBZrro6HECU-du-JgFdWqHDo8D-SN3xx7DJnJdM54E&dib_tag=se&keywords=organic+waste+products&qid=1721818795&sprefix=organic+waste+products%2Caps%2C218&sr=8-8" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/61uuOa8c14L.AC_UL480_FMwebp_QL65.jpg" alt="Image">
+                </a>
+                <figcaption>GREEN BIN</figcaption>
+            </figure>
+        </div>
+        <div class="grid-item">
+            <figure>
+                <a href="https://www.amazon.in/sspa/click?ie=UTF8&spc=MTozMTcwNDc4NTE0NDc5OTQ2OjE3MjIxOTE2MzU6c3BfYnRmOjMwMDEwMzQ2NjMzNDgzMjo6MDo6&url=%2FSpintech-Polyethylene-Composter-Compost-SCB100%2Fdp%2FB09RPPWS1G%2Fref%3Dsr_1_9_sspa%3Fcrid%3DGZLOPRSWFMOS%26keywords%3Dwaste%2Bdigestires%26qid%3D1722191635%26sprefix%3Dwaste%2Bdigestires%252Caps%252C288%26sr%3D8-9-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/71OefkXlwlL._AC_UL480_FMwebp_QL65_.jpg"  height="230px" alt="Image">
+                </a>
+                <figcaption>COMPOST BIN</figcaption>
+            </figure>
+        </div>
+        <div class="grid-item">
+            <figure>
+                <a href="https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo2NTc3MTczOTE3NzM4MjA6MTcyMjIyNzMyMTpzcF9tdGY6MjAwNTE4MzMzMjA1OTg6OjA6Og&url=%2FKraft-Seeds-Garden-Trowel-Multicolour%2Fdp%2FB07MGP183T%2Fref%3Dsr_1_21_sspa%3Fcrid%3D3UN474MV4YQ5L%26dib%3DeyJ2IjoiMSJ9.DbKfL1rIqfjNJ1fcg9OSJjk9WcVXsGbtyZXcuT9uthya8kIb-CqC_3hPP68CErxiNI5FOkfkfx1byMcn0gaRss_E9ysAL2zJs280eieeV4cqtFjxK9-EeXVBTLOIlhBe5dSncIUHuHd2yQZ8PDjF0RS27kyZWOu9mU85KjPN5eRWypl8ZdAWd4QCngEZX7tPOu45PF6ckeQysqtKeh2b78t_bwCRDf7zG_gW_yx2kGFicNn_lH96HDmcPdgMz56BwTIoxhC-cbGXG1xppXgjYNLoBJv02FjgrmiSw_HdaL4.4BJQXbclyvhR3ZzeMupW7uxWsiY-ySqNNuBlmbQVEq0%26dib_tag%3Dse%26keywords%3Dshovels%26qid%3D1722227321%26sprefix%3Dshovel%252Caps%252C301%26sr%3D8-21-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/61ctJAV-8dL._AC_UL480_FMwebp_QL65_.jpg" width="300px" height="250px" alt="Image">
+                </a>
+                <figcaption>GARDEN SHOVEL</figcaption>
+            </figure>
+        </div>
+        <div class="grid-item">
+            <figure>
+                <a href="https://www.amazon.in/ORGANIC-BAZAR-Geo-Grow-Bag/dp/B0B18QMPB3/ref=sr_1_36?crid=1MJNKZNQ5QI83&dib=eyJ2IjoiMSJ9._-QdsPXw89CxWEaJzkaYjqKRDqz44xENrBCmmlb0L0G4_7bPjk-dKpNIsQ09qGM22a3UsDreINTrghIoXadmVi9Mita-xSFZFl2992bv4Ar6bzOtjBoKnGKM0QlkPMaUS9w5e-mBxmzopRXaBd1lpeySu83j7_8-5GKH0ZT0SReVw08aqnhFdeZUG0yPLHqKQbe4kSRYAlD5OB65vvZ1LTOdgmw6Z_ebto80Jr-X_moEfju51OsiySsasiNRXN26KhWjfvAaldoMQVNklQMWT_-ExTh2LSZopkYC8E1_Jik.Qd5_9AgLWPyiYTYVQ45PcWBf7KFTx0H2Mq9xIMPB4oY&dib_tag=se&keywords=plant+bags&qid=1722227853&sprefix=plant+bags%2Caps%2C278&sr=8-36" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/6175GfwC1ZL._AC_UL480_FMwebp_QL65_.jpg" width="300px" height="250px" alt="Image">
+                </a>
+                <figcaption>GROW BAGS</figcaption>
+            </figure>
+        </div> 
+    </div>
+</body>
+</html>
