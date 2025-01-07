@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Waste Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('img1.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 15px 30px; /* Increased padding for larger button size */
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 10px; /* Adjusted border radius for larger button */
+            cursor: pointer;
+            font-size: 18px; /* Increased font size */
+        }
+        .back-button:hover {
+            background: #218838;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 450px;
+        }
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-container input, .form-container select, .form-container textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background: #218838;
+        }
+    </style>
+    <script>
+        function toggleOtherField() {
+            var wasteType = document.getElementById('waste-type');
+            var otherField = document.getElementById('other-field');
+            if (wasteType.value === 'other') {
+                otherField.style.display = 'block';
+            } else {
+                otherField.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <button class="back-button" onclick="history.back()">Back</button>
+    <div class="form-container">
+        <h1>Organic Waste Info</h1>
+        <form action="submit.php" method="post">
+            <label for="waste-category">Category of Waste:</label>
+            <select id="waste-category" name="waste-category" required>
+                <option value="" disabled selected>Select waste category</option>
+                <option value="wet">Wet</option>
+                <option value="dry">Dry</option>
+            </select>
+            <label for="waste-type">Type of Organic Waste:</label>
+            <select id="waste-type" name="waste-type" required onchange="toggleOtherField()">
+                <option value="" disabled selected>Select waste type</option>
+                <option value="fruit">Fruit</option>
+                <option value="vegetable">Vegetable</option>
+                <option value="meat">Meat</option>
+                <option value="dairy">Dairy</option>
+                <option value="compostable-paper">Compostable Paper</option>
+                <option value="other">Other</option>
+            </select>
+            <div id="other-field" style="display:none;">
+                <label for="other-info">Please specify:</label>
+                <input type="text" id="other-info" name="other-info">
+            </div>
+            <label for="wetness">Amount of Wetness (%):</label>
+            <input type="number" id="wetness" name="wetness" step="0.01" min="0" max="100" required>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" step="0.01" min="0" required>
+            <label for="additional-info">Additional Information:</label>
+            <textarea id="additional-info" name="additional-info" rows="3"></textarea>
+            <label for="contact-details">Contact Details:</label>
+            <textarea id="contact-details" name="contact-details" rows="3" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
