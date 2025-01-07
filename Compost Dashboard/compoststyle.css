@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+}
+
+/*styles for menu */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color:rgba(34, 179, 204, 0.933);  
+    color: white;
+    position: fixed;
+}
+
+.sidebar header {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(185, 43, 196); 
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 25px 20px; /* Updated from 15px to 25px */
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar ul li:hover {
+    background-color: rgba(34, 204, 180, 0.933);
+}
+
+.sidebar ul li a:hover {
+    color: white;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+
+ /* preparation option */
+.sidebar ul ul {
+    display: none;
+    list-style-type: none;
+    padding-left: 42px;
+    
+}
+
+.sidebar ul ul li {
+    padding: 5px 0;
+}
+
+.sidebar ul ul li a {
+    font-size: 17px;
+}
+
+.dropdown li a:hover {
+  background-color: rgb(218, 32, 128);
+  
+}
+
+
+.sidebar ul li a.dropdown-toggle::after {
+    content: "\f078"; /* FontAwesome down arrow */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    padding-left: 10px; /* Add padding to give space between text and arrow */
+}
+
+.sidebar ul li a.dropdown-toggle::after {
+    content: "\f077"; /* FontAwesome up arrow */
+} 
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="compoststyle.css">
+    
+</head>
+<body>
+    <div class="sidebar">
+        <header>Menu</header>
+        <ul>
+            
+            <li><a href="info.html" target="content_page"><i class="fas fa-seedling"></i>Organic Compost</a></li>
+            <li><a href="benifits.html" target="content_page"><i class="fas fa-cogs"></i>Benifits</a></li>
+            <li><a href="materials.html" target="content_page"><i class="fas fa-shopping-bag"></i>Materials Required</a></li>
+            <!-- <li><a href="preparation.html" target="content_page"><i class="fas fa-book-open"></i>Preparation</a></li> -->
+            <li>
+                <a href="#" class="dropdown-toggle" onclick="toggleDropdown('preparation-dropdown')"><i class="fas fa-book-open"></i>Preparation</a>
+                <ul id="preparation-dropdown" class="dropdown">
+                    <li><a href="step1.html" target="content_page">Step 1</a></li>
+                    <li><a href="step2.html" target="content_page">Step 2</a></li>
+                    <li><a href="step3.html" target="content_page">Step 3</a></li>
+                    <li><a href="step4.html" target="content_page">Step 4</a></li>
+                </ul>
+            </li>
+
+
+            
+            <!-- <li><a href="category.html" target="content_page"><i class="fas fa-book-open"></i>Category</a></li> -->
+        </ul>
+    </div>
+    <script>
+        function toggleDropdown(id) {
+            var dropdown = document.getElementById(id);
+            if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                dropdown.style.display = "block";
+            } else {
+                dropdown.style.display = "none";
+            }
+        }
+        
+    </script> 
+</body>
+</html>
