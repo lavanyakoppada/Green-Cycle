@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="biogasstyle.css">
+</head>
+<body>
+    <div class="sidebar">
+        <header>Menu</header>
+        <ul>
+            <li><a href="info.html" target="content_page"><i class="fas fa-leaf"></i>Biogas</a></li>
+            <li><a href="process.html" target="content_page"><i class="fas fa-recycle icon"></i>Process</a></li>
+            <li>
+                <a href="#" class="dropdown-toggle" onclick="toggleDropdown('preparation-dropdown')"><i class="fas fa-book-open"></i>Preparation</a>
+                <ul id="preparation-dropdown" class="dropdown">
+                    <li><a href="step1.html" target="content_page">Step 1</a></li>
+                    <li><a href="step2.html" target="content_page">Step 2</a></li>
+                    <li><a href="step3.html" target="content_page">Step 3</a></li>
+                    <li><a href="step4.html" target="content_page">Step 4</a></li>
+                    <li><a href="step5.html" target="content_page">Step 5</a></li>
+                    <li><a href="step6.html" target="content_page">Step 6</a></li>
+                    <li><a href="step7.html" target="content_page">Step 7</a></li>
+                </ul>
+            </li>
+            <!-- <li><a href="utilization.html" target="content_page"><i class="fas fa-cogs"></i>Benifits</a></li> -->
+            <li>
+                <p>
+                <a href="#" class="dropdown-toggle" onclick="toggleDropdown('benifits-dropdown')"><i class="fas fa-cogs"></i>Benifits</a>
+                <ul id="benifits-dropdown" class="dropdown">
+                    <li><a href="advantages.html" target="content_page">Pros</a></li>
+                    <li><a href="disadvantages.html" target="content_page">Cons</a></li>
+                </ul></p>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleDropdown(id) {
+            var dropdown = document.getElementById(id);
+            if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                dropdown.style.display = "block";
+            } else {
+                dropdown.style.display = "none";
+            }
+        }
+    </script> 
+</body>
+</html>
