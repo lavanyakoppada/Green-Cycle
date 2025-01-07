@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Options</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('bg.webp');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            position: relative; /* Added for positioning the back button */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            max-width: 1000px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .option {
+            text-align: center;
+            margin: 0 20px;
+        }
+
+        .option img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .option p {
+            margin-top: 10px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 10px; /* Adjusted to move further to the left */
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="history.back()">Back</button>
+    <div class="container">
+        <div class="option">
+            <a href="Biogas Dashboard/biogasmain.html"><img src="bio.jpg" alt="Image 1"></a>
+            <p>BIOGAS</p>
+        </div>
+        <div class="option">
+            <a href="Compost Dashboard/compostmain.html"><img src="com.jpg" alt="Image 1"></a>
+            <p>COMPOST</p>
+        </div>
+    </div>
+</body>
+</html>
